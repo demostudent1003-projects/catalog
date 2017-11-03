@@ -1,8 +1,8 @@
 <h1>
-  Coffee bean #<%= @coffee_bean.id %> details
+  Coffee bean #<%= @coffee_beans.id %> details
 </h1>
 
-<a href="/coffee_beans/<%= @coffee_bean.id %>/edit">
+<a href="/coffee_beans/<%= @coffee_beans.id %>/edit">
   Edit coffee bean
 </a>
 
@@ -10,20 +10,20 @@
 
 <dl>
   <dt>Blend name</dt>
-  <dd><%= @coffee_bean.blend_name %></dd>
+  <dd><%= @coffee_beans.blend_name %></dd>
 
   <dt>Origin</dt>
-  <dd><%= @coffee_bean.origin %></dd>
+  <dd><%= @coffee_beans.origin %></dd>
 
   <dt>Variety</dt>
-  <dd><%= @coffee_bean.variety %></dd>
+  <dd><%= @coffee_beans.variety %></dd>
 
   <dt>Notes</dt>
-  <dd><%= @coffee_bean.notes %></dd>
+  <dd><%= @coffee_beans.notes %></dd>
 
 </dl>
 
-<a href="/delete_coffee_bean/<%= @coffee_bean.id %>" class="btn btn-default">
+<a href="/delete_coffee_bean/<%= @coffee_beans.id %>" class="btn btn-default">
   Delete coffee bean
 </a>
 

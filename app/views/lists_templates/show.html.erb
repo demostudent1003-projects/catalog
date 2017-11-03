@@ -1,0 +1,28 @@
+<h1>
+  List #<%= @list.id %> details
+</h1>
+
+<a href="/lists/<%= @list.id %>/edit">
+  Edit list
+</a>
+
+<hr>
+
+<dl>
+  <dt>Title</dt>
+  <dd><%= @list.title %></dd>
+
+  <dt>Description</dt>
+  <dd><%= @list.description %></dd>
+
+</dl>
+
+<a href="/delete_list/<%= @list.id %>" class="btn btn-default">
+  Delete list
+</a>
+
+<hr>
+
+<a href="/lists">
+  Go back
+</a>

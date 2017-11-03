@@ -22,13 +22,13 @@
   <dd><%= @food.store_address %></dd>
 
   <dt>Latitude</dt>
-  <dd>40.6892</dd>
+  <dd><%= @latitude %></dd>
 
   <dt>Longitude</dt>
-  <dd>-74.0445</dd>
+  <dd><%= @longitude %></dd>
 </dl>
 
-<a href="/delete_food" class="btn btn-default">
+<a href="/delete_food/<%= @food.id %>" class="btn btn-default">
   Delete food
 </a>
 
@@ -43,7 +43,7 @@
 <script>
   var map;
   function initialize() {
-    var myLatlng = new google.maps.LatLng(40.6892, -74.0445);
+    var myLatlng = new google.maps.LatLng(<%= @latitude %>, <%= @longitude %>);
     var mapOptions = {
       zoom: 15,
       center: myLatlng
