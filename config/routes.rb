@@ -37,6 +37,26 @@ Rails.application.routes.draw do
 
   #------------------------------
 
+  # Routes for the Lists resource:
+  
+  # CREATE
+  get("/lists/new", { :controller => "lists", :action => "new_form" })
+  get("/create_list", { :controller => "lists", :action => "create_row" })
+
+  # READ
+  get("/lists", { :controller => "lists", :action => "index" })
+  get("/lists/:id", { :controller => "lists", :action => "show" })
+
+  # UPDATE
+  get("/lists/:id/edit", { :controller => "lists", :action => "edit_form" })
+  get("/update_list/:id", { :controller => "lists", :action => "update_row" })
+
+  # DELETE
+  get("/delete_list/:id", { :controller => "lists", :action => "destroy_row" })
+
+
+  #------------------------------
+
   get("/", { :controller => "coffee_beans", :action => "index" })
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

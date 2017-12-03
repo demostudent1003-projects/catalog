@@ -4,14 +4,15 @@
 
 <hr>
 
-<form action="/update_coffee_bean">
+<form action="/update_coffee_bean/<%= @id %>">
+  
   <!-- Label and input for blend_name -->
   <div class="form-group">
     <label for="blend_name" class="control-label">
       Blend name
     </label>
 
-    <input type="text" id="blend_name" name="blend_name" class="form-control">
+    <input type="text" id="blend_name" name="blend_name" class="form-control" value="<%= @blend_name %>">
   </div>
 
   <!-- Label and input for origin -->
@@ -20,7 +21,7 @@
       Origin
     </label>
 
-    <input type="text" id="origin" name="origin" class="form-control">
+    <input type="text" id="origin" name="origin" class="form-control" value="<%= @origin %>">
   </div>
 
   <!-- Label and input for variety -->
@@ -29,7 +30,7 @@
       Variety
     </label>
 
-    <input type="text" id="variety" name="variety" class="form-control">
+    <input type="text" id="variety" name="variety" class="form-control" value="<%= @variety %>">
   </div>
 
   <!-- Label and input for notes -->
@@ -38,7 +39,7 @@
       Notes
     </label>
 
-    <input type="text" id="notes" name="notes" class="form-control">
+    <input type="text" id="notes" name="notes" class="form-control" value="<%= @notes %>">
   </div>
 
   <button class="btn btn-default">
